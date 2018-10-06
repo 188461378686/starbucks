@@ -1,0 +1,584 @@
+.nav{
+    width: 30%;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left: 0;
+    background: #FFF;
+}
+.container{
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index:100;
+}
+.header{
+    height: 48px;
+    padding: 24px;
+}
+.logo{
+    float: left;
+    margin-right: 12px;
+    width: 36px;
+}
+.logo img{
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+}
+.primary{
+    display:inline-block;
+}
+.primary ul li{
+    float:left;
+}
+.primary li a{
+    color: rgba(0,0,0,0.87);
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px;
+}
+.header .menu{
+    float:right;
+    padding:6px 0;
+    height: 24px;
+}
+
+.header .menu img{
+    display: block;
+    height: 24px;
+    opacity: 0.8;
+    vertical-align: middle;
+}
+.body{
+    height: calc(100% - 98px);
+    display: table;
+    width: 100%;
+}
+.account-entry{
+    vertical-align: middle;
+    display:table-cell;
+    padding: 0 24px 0 84px;
+}
+.account-entry .top{
+    margin-bottom:24px;
+}
+.account-entry .top span{
+    font-size: 2.6rem;
+    font-weight: 700;
+    color:rgba(0,0,0,0.87);
+}
+
+.footer .login img{
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+.footer .login{
+    color: #00A862;
+    cursor: pointer;
+    float: left;
+    margin-right: 24px;
+    padding: 2px 0;
+}
+.data-reactroot .footer span{
+    font-size: 1.6rem;
+}
+.footer .btn{
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    color: #00A862;
+    font-weight: 500;
+    padding: 2px 12px;
+    display: inline-block;
+    box-sizing: border-box;
+
+    /*position: relative;*/
+    /*transition-duration: 0.1s;*/
+    /*transition-property: background, border-color, color;*/
+    /*background: none;*/
+
+
+    /*overflow: hidden;*/
+
+}
+
+
+
+/*隐藏部分*/
+.overlay {
+    background: #FFF;
+    z-index:1005;
+    width: 30%;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    transition: all 0.1s linear;
+}
+.o-container{
+    display: table;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.o-container .o-header{
+    height: 36px;
+    padding:24px;
+    display:block;
+    position: relative;
+}
+.o-container .o-img img{
+    width: 36px;
+    height: 36px;
+    color:#00A862;
+}
+.o-container .o-img{
+    float: left;
+    margin-right: 12px;
+    width: 36px;
+}
+.o-container .o-btn{
+    float:right;
+    border:none;
+    outline: none;
+    padding: 6px 0;
+    box-sizing: content-box;
+    height: 48px;
+    width: 48px;
+    margin:-12px;
+    cursor: pointer;
+    background: none;
+}
+.o-container .o-body{
+    height: 100%;
+    box-sizing: border-box;
+    display: table-row;
+    transform: scale(1.2);
+    transition: all 0.1s linear;
+    overflow:hidden;
+}
+.active .o-container .o-body{
+    transform: scale(1);
+}
+.o-body .o-menu{
+    display:table-cell;
+    vertical-align: middle;
+    height: 89%;
+    padding:0 24px 0 84px;
+}
+.o-body .o-menu li a{
+    display:block;
+    font-weight: 700;
+    font-size:18px;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.4px;
+    padding:8px 0;
+}
+.o-menu li hr{
+    margin-bottom: 12px;
+    margin-top: 12px;
+    background: rgba(0, 0, 0, 0.12);
+    border: 0;
+    height: 1px;
+}
+.o-menu .o-footer{
+    display:block;
+    font-size:1.6rem;
+}
+.o-footer .o-login img{
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+    color:#00A862;
+    cursor: pointer;
+}
+.o-footer .o-login{
+    float: left;
+    margin-right: 24px;
+    padding: 3px 0;
+    display:inline-block;
+}
+.o-footer .o-login span{
+    color:#00A862;
+    cursor: pointer;
+    font-size:1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+
+}
+.o-footer .o-enroll{
+    padding:2px 12px;
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    box-sizing: border-box;
+    color: #00A862;
+    display: inline-block;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+ /*hero start*/
+
+.content{
+    position: relative;
+    overflow: hidden;
+    display:block;
+}
+.hero .slick-list{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.hero .slick-track{
+    position: relative;
+    top:0;
+    left:0;
+    display:block;
+    height: 100%;
+}
+.slick-track::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.hero .slick-slide{
+    min-height:240px;
+    float:left;
+    display:block;
+}
+.hero .slick-slide a{
+    display:block;
+    height: 100%;
+}
+.hero .slick-slide img{
+    display: block;
+
+}
+.hero .ch-btn{
+    background-size: contain;
+    border: 0;
+    background: url(https://www.starbucks.com.cn/assets/icons/icon-arrow-white.svg) transparent no-repeat center center;
+    content: '';
+    font-size: 0;
+    height: 48px;
+    line-height: 0;
+    outline: none;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    margin-top: -25px;
+    width: 48px;
+
+}
+.content .hero{
+    position: relative;
+    margin-top:-24px;
+}
+.content .promotion{
+    padding:24px 0;
+    display:block;
+}
+.content .promotion .grid{
+    margin:-12px;
+}
+.wrapper.fluid{
+    max-width: 100%;
+   display:block;
+}
+.content .promotion a img{
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    width: 100%;
+}
+.content .promotion a{
+    padding:12px;
+    position: relative;
+}
+
+/*program start*/
+.content .program{
+    background-color: #fff;
+}
+.content .program .wrapper{
+    overflow:hidden;
+    position: relative;
+    display:block;
+}
+.content .program .columns-2{
+    text-align:center;
+    position: relative;
+
+}
+.program .columns-2 .first{
+    padding-top:36px;
+    padding-bottom:36px;
+    box-sizing: border-box;
+    width: 50%;
+}
+h2{
+    margin-bottom:18px;
+    line-height:140%;
+    color:#000;
+    font-size: 2.2rem;
+    font-weight: 400;
+
+}
+.light{
+    clear:both;
+    color:rgba(0,0,0,0.56);
+    word-wrap: break-word;
+    word-break:normal;
+    margin:0  0 24px;
+    border-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.light .bottom-link{
+    color:#c2a661;
+    margin-right:6px;
+    vertical-align: middle;
+}
+.flex{
+    clear:both;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:0 0 24px;
+    margin-bottom:0;
+    text-align:center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+.flex a{
+    margin-right:6px;
+    vertical-align: middle;
+    display:inline-block!important;
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    box-sizing: border-box;
+    color: #00A862;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    padding: 6px 18px;
+    position: relative;
+    transition-duration: 0.1s;
+    transition-property: background, border-color, color;
+
+}
+.columns-2 .img{
+    position: static;
+}
+.columns-2 .img img{
+    height: 72px;
+    top:50%;
+    position:absolute;
+    margin-top:-36px;
+    right:0;
+}
+/*星巴克精选start*/
+.content .tmall{
+    padding:0 36px;
+    text-align: center;
+    display:block;
+}
+.tmall p,h2{
+    text-align: center;
+}
+.tmall .columns-4{
+    padding-top:48px!important;
+    margin: -12px;
+}
+.tmall .columns-4:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+.tmall .columns-4 li{
+    padding:12px!important;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.tmall .columns-4 li:nth-child(1){
+    margin-bottom: 48px;
+}
+.columns-4 li .title-1{
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 140%;
+    font-weight: 400;
+}
+p{
+    margin:0 0 24px;
+    display:block;
+    word-wrap: break-word;
+    word-break: normal;
+}
+.columns-4 li a{
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    text-align: center;
+    width: 100%;
+}
+.columns-4 li img{
+    margin-top: -36px;
+    height: 72px;
+    max-width: 100%;
+}
+.columns-4 li .margin2{
+    color: rgba(0, 0, 0, 0.56) !important;
+    font-size:1.4rem;
+    margin-bottom: 18px;
+}
+.columns-4 li .caption{
+    font-size: 1.2rem;
+    color: #C2A661;
+    font-weight: 400;
+    opacity: 0.7;
+    text-transform: none;
+}
+.content .coffeehouse{
+    background-image: linear-gradient(-180deg, #FCFCFC 0%, #FFF 100%);
+    padding: 36px 0 36px 0;
+    margin-bottom: -24px;
+    display:block;
+}
+.content .coffeehouse .center{
+   text-align:center;
+}
+.content .coffeehouse .scroll-wrapper{
+    position:relative;
+    overflow: hidden;
+}
+.content .coffeehouse .scroll-wrapper> *{
+    margin-bottom:-24px;
+    padding-bottom:24px;
+}
+.content .coffeehouse .scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display:block;
+    margin-right:24px;
+}
+.scroll-wrapper .scroll-arrow{
+    height: 28.8px;
+    width: 28.8px;
+    border-radius: 50%;
+    box-sizing:border-box;
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.12);
+    background: white;
+    cursor: pointer;
+    margin-top:-16px;
+    position: absolute;
+    padding:2px 0;
+    text-align: center;
+    top:50%;
+    z-index: 1;
+    transition: all 0.1s ease;
+}
+.scroll-wrapper .scroll-arrow-left{
+    left:24px;
+}
+.scroll-wrapper .scroll-arrow-right{
+    right:24px;
+}
+.scroll-items .preview{
+    background-position: center,center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin:0 auto 6px;
+    display:inline-block;
+    height: 168px;
+    width: calc(100% + 38px);
+    margin-top: -18px;
+    margin-left: -19px;
+    margin-right: -19px;
+}
+.card.thumbnail.rect{
+    width: 288px;
+}
+.scroll>.wrapper .thumbnail{
+
+    margin-right:16px;
+
+}
+.card.thumbnail{
+    box-sizing: border-box;
+    display: inline-block;
+}
+.scroll-items .first{
+    background-image: url(../img/b1.jpg);
+}
+.scroll-items .second{
+    background-image: url(../img/b2.jpg);
+}
+.scroll-items .third{
+    background-image: url(../img/b3.jpg);
+}
+.scroll-items .fourth{
+    background-image: url(../img/b4.jpg);
+}
+a.card{
+    color: inherit;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.card{
+    background:#fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.12);
+    display: block;
+    overflow: hidden;
+    padding: 18px;
+    position:relative;
+    vertical-align: top;
+}
+.card.thumbnail .tag{
+    font-size:1.4rem;
+    background-color: #c2a661;
+    color:#fff;
+    position: absolute;
+    padding:4px 12px;
+    left:0;
+    top:6px;
+}
+.card strong{
+    display:block;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 160%;
+}
+.scroll-items{
+    display:table;
+}
+.scroll-arrow-left{
+    display:none;
+}
